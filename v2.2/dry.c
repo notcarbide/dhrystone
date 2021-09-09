@@ -5,6 +5,8 @@
 	*) echo 'Filename must end in ".c"' >&2; exit 1;;
 	esac
 
+	CFLAGS="-std=gnu90 ${CFLAGS}"
+
 	echo "${CC=cc} -c ${CFLAGS} $0 -o dry1.o"
 	      ${CC}    -c ${CFLAGS} $0 -o dry1.o || exit 1
 	echo "${CC} -DPASS2 ${CFLAGS} $0 dry1.o ${LFLAGS} -o dry2"
