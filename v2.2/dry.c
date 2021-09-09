@@ -527,7 +527,7 @@ float           Microseconds,
 /* end of variables for time measurement */
 
 
-main (argc, argv) int argc; char *argv[];
+int main (argc, argv) int argc; char *argv[];
 /*****/
 
   /* main program, corresponds to procedures        */
@@ -732,7 +732,7 @@ main (argc, argv) int argc; char *argv[];
 }
 
 
-Proc_1 (Ptr_Val_Par)
+int Proc_1 (Ptr_Val_Par)
 /******************/
 
 REG Rec_Pointer Ptr_Val_Par;
@@ -766,7 +766,7 @@ REG Rec_Pointer Ptr_Val_Par;
 } /* Proc_1 */
 
 
-Proc_2 (Int_Par_Ref)
+int Proc_2 (Int_Par_Ref)
 /******************/
     /* executed once */
     /* *Int_Par_Ref == 1, becomes 4 */
@@ -789,7 +789,7 @@ One_Fifty   *Int_Par_Ref;
 } /* Proc_2 */
 
 
-Proc_3 (Ptr_Ref_Par)
+int Proc_3 (Ptr_Ref_Par)
 /******************/
     /* executed once */
     /* Ptr_Ref_Par becomes Ptr_Glob */
@@ -804,7 +804,7 @@ Rec_Pointer *Ptr_Ref_Par;
 } /* Proc_3 */
 
 
-Proc_4 () /* without parameters */
+int Proc_4 () /* without parameters */
 /*******/
     /* executed once */
 {
@@ -816,7 +816,7 @@ Proc_4 () /* without parameters */
 } /* Proc_4 */
 
 
-Proc_5 () /* without parameters */
+int Proc_5 () /* without parameters */
 /*******/
     /* executed once */
 {
@@ -853,7 +853,7 @@ extern  int     Int_Glob;
 extern  char    Ch_1_Glob;
 
 
-Proc_6 (Enum_Val_Par, Enum_Ref_Par)
+int Proc_6 (Enum_Val_Par, Enum_Ref_Par)
 /*********************************/
     /* executed once */
     /* Enum_Val_Par == Ident_3, Enum_Ref_Par becomes Ident_2 */
@@ -887,7 +887,7 @@ Enumeration *Enum_Ref_Par;
 } /* Proc_6 */
 
 
-Proc_7 (Int_1_Par_Val, Int_2_Par_Val, Int_Par_Ref)
+int Proc_7 (Int_1_Par_Val, Int_2_Par_Val, Int_Par_Ref)
 /**********************************************/
     /* executed three times                                      */ 
     /* first call:      Int_1_Par_Val == 2, Int_2_Par_Val == 3,  */
@@ -907,7 +907,7 @@ One_Fifty      *Int_Par_Ref;
 } /* Proc_7 */
 
 
-Proc_8 (Arr_1_Par_Ref, Arr_2_Par_Ref, Int_1_Par_Val, Int_2_Par_Val)
+int Proc_8 (Arr_1_Par_Ref, Arr_2_Par_Ref, Int_1_Par_Val, Int_2_Par_Val)
 /*********************************************************************/
     /* executed once      */
     /* Int_Par_Val_1 == 3 */
