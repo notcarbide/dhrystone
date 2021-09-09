@@ -374,6 +374,8 @@
  */
 
 /* Compiler and system dependent definitions: */
+#include <stdlib.h>
+#include <string.h>
 
 /* variables for time measurement: */
 
